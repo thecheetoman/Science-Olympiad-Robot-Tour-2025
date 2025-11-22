@@ -17,6 +17,7 @@ def convertZip():
   except OSError as e:
     print(f"Error renaming file: {e}")
   extractZip(new)
+  os.rename(new, name)
 def extractZip(name):
   print(f"Extracting {name}...")
   try:
